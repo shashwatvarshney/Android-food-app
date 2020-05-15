@@ -13,7 +13,7 @@ import android.widget.Toast;
 import com.example.food.Databse.userAddress;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
-public class address extends AppCompatActivity implements View.OnClickListener {
+public class ChangeAddress extends AppCompatActivity implements View.OnClickListener {
     EditText edtHouseNo,edtArea,edtCity,edtPincode;
     Button btnAddress;
 SharedPreferences sp;
@@ -21,13 +21,13 @@ SharedPreferences sp;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_address);
-sp=getSharedPreferences("User",0);
         edtHouseNo=(MaterialEditText) findViewById(R.id.edtHouseNo);
         edtArea=(MaterialEditText) findViewById(R.id.edtArea);
         edtCity=(MaterialEditText) findViewById(R.id.edtCity);
         edtPincode=(MaterialEditText) findViewById(R.id.edtPincode);
-
+sp=getSharedPreferences("User",0);
         btnAddress=(Button) findViewById(R.id.btnAddress);
+        btnAddress.setText("Change Address");
         btnAddress.setOnClickListener(this);
     }
 
@@ -45,8 +45,8 @@ sp=getSharedPreferences("User",0);
         ua.setCity(city);
         ua.setHouseno(house);
         ua.setPinCode(pin);
-        MainActivity.useData.myDao().addAddress(ua);
-        Toast.makeText(this,"Adddress added ",Toast.LENGTH_LONG).show();
+        MainActivity.useData.myDao().updateAddress(ua);
+        Toast.makeText(this,"Adddress changed ",Toast.LENGTH_LONG).show();
         startActivity(new Intent(this,orderdetails.class));
     }
 }

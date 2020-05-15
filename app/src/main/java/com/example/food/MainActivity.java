@@ -26,10 +26,10 @@ public  static useData useData;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 sp=getSharedPreferences("user",0);
-SharedPreferences.Editor e=sp.edit();
-e.putLong("Phone",123);
-e.apply();
-        useData= Room.databaseBuilder(getApplicationContext(),useData.class,"Users").fallbackToDestructiveMigration().allowMainThreadQueries().build();
+//SharedPreferences.Editor e=sp.edit();
+//e.putLong("Phone",123);
+//e.apply();
+        useData= Room.databaseBuilder(getApplicationContext(),useData.class,"Users").allowMainThreadQueries().build();
         btnSignIn=(Button) findViewById(R.id.btnSignIn);
         btnSignUp=(Button) findViewById(R.id.btnSignUp);
 

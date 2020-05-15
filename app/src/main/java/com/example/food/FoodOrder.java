@@ -35,11 +35,13 @@ Order o;
 
     @Override
     public void onClick(View v) {
+        SharedPreferences sp1=getSharedPreferences("User",0);
+        Long phone=sp1.getLong("Phone",0);
         switch (v.getId()){
             case R.id.pizzaButton:
                  o=new Order();
                 o.setItemName("Pizza");
-                o.setPhoneNumber(123l);
+                o.setPhoneNumber(phone);
                 o.setPrice(500.00);
                 MainActivity.useData.myDao().placeOrder(o);
 
@@ -47,14 +49,14 @@ Order o;
             case R.id.burgerButton:
                  o=new Order();
                 o.setItemName("Burgur");
-                o.setPhoneNumber(123l);
+                o.setPhoneNumber(phone);
                 o.setPrice(400.00);
                 MainActivity.useData.myDao().placeOrder(o);
                 break;
             case R.id.pastryButton:
                 o=new Order();
                 o.setItemName("Pastry");
-                o.setPhoneNumber(123l);
+                o.setPhoneNumber(phone);
                 o.setPrice(600.00);
                 MainActivity.useData.myDao().placeOrder(o);
                 break;

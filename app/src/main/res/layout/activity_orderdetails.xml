@@ -10,9 +10,9 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
+        android:layout_height="100dp"
         android:textSize="25sp"
-        android:layout_weight="1"
+
         android:textAlignment="center"
         android:text="Orders"
         android:gravity="center_horizontal" />
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:textSize="15sp"
         android:hint="items will be here"
-        android:layout_marginBottom="500dp"/>
+        />
 
     <TextView
         android:id="@+id/price"
@@ -31,6 +31,26 @@
         android:layout_height="wrap_content"
         android:hint="price will be here"
         android:textSize="15sp"
-        android:layout_marginBottom="60dp"/>
+        />
+    <TextView
+        android:id="@+id/viewAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+<Button
+    android:id="@+id/address"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="Add Address"/>
+    <Button
+        android:id="@+id/order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="365dp"
+        android:onClick="placeOrder"
+        android:text="Place Order"
+        android:textColor="@color/colorPrimary"
+        tools:ignore="OnClick" />
 </LinearLayout>
