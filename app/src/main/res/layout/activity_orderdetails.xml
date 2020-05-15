@@ -10,30 +10,47 @@
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:textSize="25sp"
 
         android:textAlignment="center"
         android:text="Orders"
         android:gravity="center_horizontal" />
 
+
     <TextView
         android:id="@+id/food"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15sp"
+        android:textSize="35sp"
         android:hint="items will be here"
         />
+    <TextView
+        android:id="@+id/food1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+
+        /> <TextView
+    android:id="@+id/food2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="35sp"
+
+    />
 
     <TextView
         android:id="@+id/price"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="price will be here"
-        android:textSize="15sp"
-        />
+
+        android:textSize="35sp" />
+
     <TextView
         android:id="@+id/viewAddress"
+        android:textSize="30dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 <Button
@@ -43,12 +60,20 @@
     android:layout_gravity="center"
     android:text="Add Address"/>
     <Button
+        android:id="@+id/Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:text="LogOut"/>
+
+    <Button
         android:id="@+id/order"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+android:layout_marginTop="110dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="365dp"
+
         android:onClick="placeOrder"
         android:text="Place Order"
         android:textColor="@color/colorPrimary"
